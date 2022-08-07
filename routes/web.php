@@ -22,5 +22,19 @@ Route::get('/loginPage', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('Dashboard.dashboard');
+    return view('Dashboard.Main', [
+        'title' => 'home'
+    ]);
+});
+
+Route::get('/users', function () {
+    return view('Dashboard.Users', [
+        'title' => 'users'
+    ]);
+});
+
+Route::get('/reports', function () {
+    return view('Dashboard.Reports', [
+        'title' => 'reports'
+    ]);
 });
