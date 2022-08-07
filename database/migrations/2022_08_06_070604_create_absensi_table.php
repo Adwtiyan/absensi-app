@@ -14,8 +14,8 @@ class CreateAbsensiTable extends Migration
     public function up()
     {
         Schema::create('absensi', function (Blueprint $table) {
-            $table->id()->primary();
-            $table->id('user_id');
+            $table->id('absensi_id');
+            $table->unsignedBigInteger('user_id');
             $table->enum('status', ['terlambat', 'sukses', 'alpha'])->nullable();
             $table->timestamps();
         });
