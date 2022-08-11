@@ -57,20 +57,26 @@
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link {{ ($title === 'home') ? 'active' : '' }}" href="/dashboard">
-              <span data-feather="home"><i class="fa-solid fa-house"></i></span>
+              <i class="fa-solid fa-house"></i>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ ($title === 'users') ? 'active' : '' }}" href="/users">
-              <span data-feather="users"><i class="fa-solid fa-users"></i></span>
+              <i class="fa-solid fa-users"></i>
               Users
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ ($title === 'reports') ? 'active' : '' }}" href="/reports">
-              <span data-feather="bar-chart-2"><i class="fa-solid fa-chart-bar"></i></span>
+             <i class="fa-solid fa-chart-bar"></i>
               Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === 'absenKaryawan') ? 'active' : '' }}" href="/absenKaryawan">
+                <i class="fa-solid fa-person-shelter"></i>
+              Absen Karyawan
             </a>
           </li>
         </ul>

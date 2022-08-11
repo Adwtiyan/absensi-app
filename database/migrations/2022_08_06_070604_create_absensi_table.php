@@ -17,6 +17,7 @@ class CreateAbsensiTable extends Migration
             $table->id('absensi_id');
             $table->unsignedBigInteger('user_id');
             $table->enum('status', ['terlambat', 'sukses', 'alpha'])->nullable();
+            $table->timestamp('waktuAbsen')->nullable();
             $table->timestamps();
         });
     }

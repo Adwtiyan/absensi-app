@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AbsenKaryawan;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\loginController;
 use Illuminate\Support\Facades\Route;
@@ -21,15 +22,8 @@ Route::get('/', function () {
 
 Route::get('/loginPage', [loginController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'mainDashboard']);
+Route::get('/users', [DashboardController::class, 'userDashboard']);
+Route::get('/reports', [DashboardController::class, 'reportDashboard']);
 
-Route::get('/users', function () {
-    return view('Dashboard.Users', [
-        'title' => 'users'
-    ]);
-});
-
-Route::get('/reports', function () {
-    return view('Dashboard.Reports', [
-        'title' => 'reports'
-    ]);
-});
+Route::get('/absenKaryawan', [AbsenKaryawan::class, 'index']);
+Route::post('/absenKaryawan', [AbsenKaryawan::class, 'store']);

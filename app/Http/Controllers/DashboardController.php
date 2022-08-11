@@ -8,6 +8,6 @@ class DashboardController extends Controller
 {
     public function mainDashboard() {
         return view('Dashboard.Main',[
-        'title' => 'dashboard']);
+        'title' => 'home']);
     }
 }
