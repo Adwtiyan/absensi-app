@@ -34,7 +34,6 @@
                                     </div>
                                 @enderror
                           </div>
-                          <input type="datetime-local" name="waktuAbsen" hidden>
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
