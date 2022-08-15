@@ -54,37 +54,25 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Nama</th>
-            <th scope="col">Alamat</th>
-            <th scope="col">No HP</th>
+            <th scope="col">Username</th>
+            <th scope="col">No Hp</th>
             <th scope="col">Email</th>
-            <th scope="col">status</th>
-            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1,001</td>
-            <td>random</td>
             <td>data</td>
-            <td>placeholder</td>
-            <td>text</td>
-            <td><span class="badge rounded-pill text-bg-success">Active</span></td>
-            <td>
-              <button type="button" class="btn btn-outline-warning">Edit</button>
-              <button type="button" class="btn btn-outline-danger">Hapus</button>
-            </td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
           </tr>
           <tr>
             <td>1,002</td>
-            <td>placeholder</td>
             <td>irrelevant</td>
-            <td>visual</td>
-            <td>layout</td>
-            <td><span class="badge rounded-pill text-bg-secondary">Inactive</span></td>
-            <td>
-              <button type="button" class="btn btn-outline-warning">Edit</button>
-              <button type="button" class="btn btn-outline-danger">Hapus</button>
-            </td>
+            <td>irrelevant</td>
+            <td>irrelevant</td>
+            <td>irrelevant</td>
           </tr>
         </tbody>
       </table>

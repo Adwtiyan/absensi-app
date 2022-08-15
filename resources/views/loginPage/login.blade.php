@@ -15,15 +15,28 @@
             <h1 class="text-center mb-3" style="color: white; font-weight: 500">Login Page</h1>
                 <div class="card text-center">
                     <div class="card-body">
-                        <form action="POST">
+                        @if (session()->has('loginError'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    {{ session('loginError') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+                        <form action="/loginPage" method="POST">
+                            @csrf
                             <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                <label for="username" class="form-label">Username</label>
+                                @error('username')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                                <input type="text" class="form-control @error('username') is-invalid
+                                @enderror" id="username" name="username" autofocus required>
                             </div>
                             <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="password" name="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                            <div class="form-text">Submit untuk Absen.</div>
                             </div>
                             <button type="submit" class="btn btn-dark">Submit</button>
                         </form>

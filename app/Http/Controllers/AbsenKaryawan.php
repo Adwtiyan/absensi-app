@@ -32,7 +32,11 @@ class AbsenKaryawan extends Controller
             'username' => 'required',
             'password' => 'required'
         ]);
-        dd($status);
-    }
 
+        Absensi::create([
+            'user_id' => $request->username,
+            'status' => $status,
+            'waktuAbsen' => $waktuAbsen
+        ]);
+    }
 }
